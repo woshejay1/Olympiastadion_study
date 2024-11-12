@@ -56,8 +56,8 @@ public class PrepareNetworkAndStops {
 
 
 
-		String outputNetworkFilePath = "F:/Masterarbeit/Version 6.0/updated_network.xml";
-		String outputTransitScheduleFilePath = "F:/Masterarbeit/Version 6.0/intermediate_transitSchedule.xml";
+		String outputNetworkFilePath = "F:/Masterarbeit/Version6.0/updated_network.xml";
+		String outputTransitScheduleFilePath = "F:/Masterarbeit/Version6.0/intermediate_transitSchedule.xml";
 		new NetworkWriter(network).write(outputNetworkFilePath);
 		new TransitScheduleWriter(transitSchedule).writeFile(outputTransitScheduleFilePath);
 
