@@ -15,13 +15,13 @@ import static org.matsim.run.OpenBerlinScenario.CRS;
 public class RunWithTestingPlans {
 	public static void main(String[] args) {
 		Config config = ConfigUtils.createConfig();
-		config.network().setInputFile("F:/Masterarbeit/Version 6.3/updated_network.xml");
-//		config.network().setInputFile("https://svn.vsp.tu-berlin.de/repos/public-svn/matsim/scenarios/countries/de/berlin/berlin-v6.3/input/berlin-v6.3-network-with-pt.xml.gz");
+		config.network().setInputFile("F:/Masterarbeit/Version 6.0/updated_network.xml");
+//		config.network().setInputFile("https://svn.vsp.tu-berlin.de/repos/public-svn/matsim/scenarios/countries/de/berlin/berlin-v6.0/input/berlin-v6.0-network-with-pt.xml.gz");
 		config.plans().setInputFile("F:/Masterarbeit/dummy-plans.xml.gz");
-		config.transit().setTransitScheduleFile("F:/Masterarbeit/Version 6.3/base_transitSchedule.xml");
-//		config.transit().setTransitScheduleFile("https://svn.vsp.tu-berlin.de/repos/public-svn/matsim/scenarios/countries/de/berlin/berlin-v6.3/input/berlin-v6.3-transitSchedule.xml.gz");
-		config.transit().setVehiclesFile("F:/Masterarbeit/Version 6.3/base_transitVehicles.xml");
-//		config.transit().setVehiclesFile("https://svn.vsp.tu-berlin.de/repos/public-svn/matsim/scenarios/countries/de/berlin/berlin-v6.3/input/berlin-v6.3-transitVehicles.xml.gz");
+		config.transit().setTransitScheduleFile("F:/Masterarbeit/Version 6.0/base_transitSchedule.xml");
+//		config.transit().setTransitScheduleFile("https://svn.vsp.tu-berlin.de/repos/public-svn/matsim/scenarios/countries/de/berlin/berlin-v6.0/input/berlin-v6.0-transitSchedule.xml.gz");
+		config.transit().setVehiclesFile("F:/Masterarbeit/Version 6.0/base_transitVehicles.xml");
+//		config.transit().setVehiclesFile("https://svn.vsp.tu-berlin.de/repos/public-svn/matsim/scenarios/countries/de/berlin/berlin-v6.0/input/berlin-v6.0-transitVehicles.xml.gz");
 		config.transit().setUseTransit(true);
 
 		config.qsim().setFlowCapFactor(1.0);
@@ -59,7 +59,7 @@ public class RunWithTestingPlans {
 
 		config.controller().setLastIteration(1);
 		config.controller().setOverwriteFileSetting(OutputDirectoryHierarchy.OverwriteFileSetting.overwriteExistingFiles);
-		config.controller().setOutputDirectory("F:/Masterarbeit/Output/Testing/dummy-test");
+		config.controller().setOutputDirectory("F:/Masterarbeit/Output/Testing/dummy-test-6.0/Gameday");
 
 		Scenario scenario = ScenarioUtils.loadScenario(config);
 		Controler controler = new Controler(scenario);
